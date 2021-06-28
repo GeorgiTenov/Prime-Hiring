@@ -1,0 +1,10 @@
+1.Download the files from github.
+
+
+2.Open Editor.
+
+
+3.Open terminal if you are working with vs code.
+
+
+4.Type in terminal - npm start.

@@ -1,0 +1,14 @@
+.form{
+    background-color: rgb(22, 17, 22);
+}
+
+.form p{
+    color:white;
+    font-size:20px;
+}
+
+.form input:last-of-type{
+    background-color: rgba(82, 39, 32, 0.548);
+    font-size: 20px;
+    margin:20px;
+}

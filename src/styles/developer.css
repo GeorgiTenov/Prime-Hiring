@@ -1,0 +1,12 @@
+.edit-link{
+    text-decoration: none;
+    color:rgb(124, 82, 82);
+    font-size:22px;
+    font-family:fantasy;
+    margin:10px;
+}
+
+.text{
+    color:yellowgreen;
+    font-family: monospace;
+}

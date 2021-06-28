@@ -1,24 +1,37 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import  Create  from './components/Create';
+import {Developers} from "./components/Developers";
+import {Edit} from "./components/Edit";
+import {Route} from "react-router-dom";
+import {DefaultDevelopers} from "./components/DefaultDevelopers";
+import {Hire} from "./components/Hire";
+import {CreateContext} from "./components/Create";
+import { developers } from './data/developers';
 
 function App() {
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route path="/edit/:id">
+        <Edit>
+          <Developers></Developers>
+        </Edit>
+        </Route>
+
+      <Route path="/create">
+        <Create>
+          <Developers></Developers>
+          </Create>
+      </Route>
+
+      <CreateContext.Provider value={developers}>
+        <Route path="/hire/:hireId"><Hire></Hire></Route>
+      </CreateContext.Provider>
+      
+     <Route path="/" exact><DefaultDevelopers></DefaultDevelopers></Route>
+    
     </div>
   );
 }
